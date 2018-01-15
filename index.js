@@ -1,5 +1,5 @@
 const pgp = require("pg-promise")();
-const db  = pgp("postgres://postgres:jhonatan@localhost:5432/curso_mean2");
+const db  = pgp("postgres://postgres:postgres@localhost:5433/curso_mean2");
 var   app = require('./app');
 var   fs  = require('fs'); 
 var port = process.env.PORT || 3978;

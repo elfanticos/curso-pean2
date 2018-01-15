@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var app        = express();
 
 //CARGAR RUTAS
-
+var user_routes = require('./routes/r_user');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -11,9 +11,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //CONFIGURAR CABECERAS HTTP
 
 //RUTAS BASE
-
-app.get('/pruebas', function(req, res) {
-	res.status(200).send({message : 'Hola mundo'});
-});
+app.use('/api',user_routes);
 
 module.exports = app;
